@@ -28,7 +28,7 @@ import React from "react";
 import "./App.css"; // カスタムCSS
 
 // ヘッダーコンポーネント
-function Header() {
+const Header = () => {
   return (
     <header className="header">
       <h1>モデルベース開発支援</h1>
@@ -38,19 +38,19 @@ function Header() {
 }
 
 // サービス紹介コンポーネント
-function Services() {
+const Services = () => {
   return (
     <section className="services">
       <h2>提供サービス</h2>
-      <div className="service-card">
+      <div className="service-card car">
         <h3>自動車</h3>
         <p>最新技術を用いた自動車開発支援</p>
       </div>
-      <div className="service-card">
+      <div className="service-card drone">
         <h3>ドローン</h3>
         <p>効率的なモデルベース開発の導入</p>
       </div>
-      <div className="service-card">
+      <div className="service-card machinery">
         <h3>産業機械</h3>
         <p>高精度なシステム設計支援</p>
       </div>
@@ -59,7 +59,7 @@ function Services() {
 }
 
 // 問い合わせフォームコンポーネント
-function ContactForm() {
+const ContactForm = () => {
   return (
     <section className="contact">
       <h2>お問い合わせ</h2>
@@ -83,16 +83,16 @@ function ContactForm() {
 }
 
 // フッターコンポーネント
-function Footer() {
+const Footer = () => {
   return (
-    <footer className="footer">
+    <footer className="footer" >
       <p>&copy; 2025 モデルベース開発支援</p>
     </footer>
   );
 }
 
 // メインのAppコンポーネント
-function App() {
+const App = () => {
   return (
     <div className="App">
       <Header />
