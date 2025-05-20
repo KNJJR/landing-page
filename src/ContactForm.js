@@ -10,6 +10,7 @@ const ContactForm = () => {
     const [status, setStatus] = useState('');
 
     const handleChange = (e) => {
+        setStatus('');
         const { name, value } = e.target;
         setFormData((prevData) => ({
             ...prevData,
@@ -109,6 +110,7 @@ const ContactForm = () => {
                     </label>
                 </div>
                 <button type="submit">送信</button>
+                <p>{status}</p>
             </form>
         </section>
     );

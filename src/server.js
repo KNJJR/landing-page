@@ -20,7 +20,7 @@ app.post('/send-email', (req, res) => {
         service: 'gmail',
         auth: {
             user: 'k.ejiri.sb@gmail.com', // 送信者のメールアドレス
-            pass: 'E29897474k'   // メールアドレスのパスワード（またはアプリケーション固有のパスワード）
+            pass: 'bzkc ubuq itmi nari'   // メールアドレスのパスワード（またはアプリケーション固有のパスワード）
         }
     });
 
