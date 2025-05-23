@@ -15,10 +15,13 @@ body {
 }
 
 .hero {
-  background: linear-gradient(to bottom right,
+  background: linear-gradient(
+      to bottom right,
       rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.6)),
-    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1600&q=80")
+      center/cover no-repeat;
   color: white;
   text-align: center;
   padding: 100px 20px 80px;
@@ -99,14 +102,6 @@ h2 {
   font-size: 1.1em;
 }
 
-.contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
 .contact input,
 .contact textarea {
   padding: 14px;
@@ -133,13 +128,12 @@ footer {
   border-top: 6px solid #005f46;
 }
 
-
 /* === Improved Contact Section === */
 .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
   border-radius: 12px;
   padding: 60px 24px;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
@@ -159,16 +153,6 @@ footer {
   max-width: 600px;
   color: #555;
 }
-
-.contact form {
-  width: 100%;
-  max-width: 600px;
-  background-color: #ffffff;
-  padding: 32px;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-}
-
 
 /* === Unified Service Card & Contact Form === */
 /* === Service Card Improvement === */
@@ -191,21 +175,14 @@ footer {
   box-sizing: border-box;
 }
 
-/* === Contact Form Alignment Improvement === */
 .contact form {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
   width: 100%;
-  max-width: none;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
   margin: 0;
-  padding: 32px 0;
-  /* 左右paddingはsectionが持つため外すことも可 */
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  box-sizing: border-box;
 }
 
 .contact label {
@@ -221,7 +198,6 @@ footer {
   border-radius: 6px;
   box-sizing: border-box;
 }
-
 
 /* === Horizontal Service Cards Layout === */
 /* === Horizontal Service Cards Layout === */
@@ -244,7 +220,6 @@ footer {
   text-align: center;
   box-sizing: border-box;
 }
-
 
 /* === Section Title and Content Layout === */
 /* === Section Layout Improvements === */
@@ -284,7 +259,6 @@ section .section-content {
   width: 100%;
 }
 
-
 /* === Horizontal Fix for Services Section === */
 /* === Force Service Cards to Align Horizontally === */
 .services .section-content {
@@ -321,4 +295,59 @@ section .section-content {
   padding: 0;
   margin: 0;
   display: block;
+}
+
+.form-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  width: 100%;
+}
+
+.form-left,
+.form-right {
+  /* flex: 1 1 48%; */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-left {
+  flex: 1;
+}
+
+.form-right {
+  flex: 2;
+}
+
+.form-submit {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.form-grid label {
+  width: 100%;
+}
+
+.form-grid input,
+.form-grid textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-grid {
+  align-items: stretch;
+}
+
+/* .form-right {
+  height: 100%;
+} */
+
+.form-right textarea {
+  flex-grow: 1;
+  height: 100%;
+  min-height: 170px;
 }

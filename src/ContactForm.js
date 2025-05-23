@@ -1,37 +1,44 @@
-import React, { useState } from "react";
 import "./App.css";
 
 const ContactForm = () => {
-  const [status, setStatus] = useState("");
-
   return (
     <form
       action="https://formspree.io/f/xvgaybvj"
       method="POST"
-      onSubmit={() => setStatus("送信が完了しました！")}
+      className="form-grid"
     >
-      <label style={{ width: "100%" }}>
-        お名前:
-        <input type="text" name="name" required />
-      </label>
+      <div className="form-left">
+        <label>
+          お名前:
+          <input type="text" name="name" required />
+        </label>
 
-      <label style={{ width: "100%" }}>
-        メールアドレス:
-        <input type="email" name="email" required />
-      </label>
+        <label>
+          会社（組織）名:
+          <input type="text" name="organization" />
+        </label>
 
-      <label style={{ width: "100%" }}>
-        メッセージ:
-        <textarea name="message" required />
-      </label>
+        <label>
+          メールアドレス:
+          <input type="email" name="email" required />
+        </label>
+      </div>
 
-      <button type="submit">送信</button>
-      <input
-        type="hidden"
-        name="_redirect"
-        value="https://your-site.com/thanks.html"
-      />
-      <p>{status}</p>
+      <div className="form-right">
+        <label>
+          メッセージ:
+          <textarea name="message" rows="8" required />
+        </label>
+      </div>
+
+      <div className="form-submit">
+        <button type="submit">送信</button>
+        <input
+          type="hidden"
+          name="_redirect"
+          value="https://your-site.com/thanks.html"
+        />
+      </div>
     </form>
   );
 };
