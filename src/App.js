@@ -1,31 +1,6 @@
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import React from "react";
 import "./App.css"; // カスタムCSS
+import Services from "./Services"
 import Profile from "./Profile";
 import Works from "./Works";
 import Contact from "./Contact";
@@ -40,26 +15,6 @@ const Header = () => {
   );
 };
 
-// サービス紹介コンポーネント
-const Services = () => {
-  return (
-    <section className="services">
-      <h2>提供サービス</h2>
-      <div className="service-card car">
-        <h3>自動車</h3>
-        <p>最新技術を用いた自動車開発支援</p>
-      </div>
-      <div className="service-card drone">
-        <h3>ドローン</h3>
-        <p>効率的なモデルベース開発の導入</p>
-      </div>
-      <div className="service-card machinery">
-        <h3>産業機械</h3>
-        <p>高精度なシステム設計支援</p>
-      </div>
-    </section>
-  );
-};
 
 // フッターコンポーネント
 const Footer = () => {
